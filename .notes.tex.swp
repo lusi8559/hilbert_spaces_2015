@@ -1,0 +1,111 @@
+\documentclass[10pt, draft]{amsbook}
+\bibliographystyle{amsalpha}
+
+\usepackage{subfiles}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+
+\usepackage{mathpazo}
+\usepackage{amssymb,amsmath,amsthm,amscd,mathrsfs,graphicx, color}
+\usepackage[notref,notcite]{showkeys}
+\usepackage[active]{srcltx}
+\usepackage{mathtools}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THEOREM ENVIRONMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%%% We may want to change teo to thm, what do you think?
+\newtheoremstyle{teo}% ?name? 
+{5pt}% ?Space above? 
+{3pt}% ?Space below? 
+{\it}% ?Body font? 
+{}% ?Indent amount? 
+{\bf}% ?Theorem head font? 
+{.}% ?Punctuation after theorem head? 
+{.5em}%  ?Space after theorem head? 
+{}% ?Theorem head spec (can be left empty, meaning ‘normal’)? 
+
+\newtheoremstyle{dfn}% ?name? 
+{3pt}% ?Space above? 
+{8pt}% ?Space below? 
+{\it}% ?Body font? 
+{}% ?Indent amount? 
+{\bf}% ?Theorem head font? 
+{.}% ?Punctuation after theorem head? 
+{.5em}%  ?Space after theorem head? 
+{}% ?Theorem head spec (can be left empty, meaning ‘normal’)? 
+
+\newtheoremstyle{rem}% ?name? 
+{3pt}% ?Space above? 
+{8pt}% ?Space below? 
+{}% ?Body font? 
+{}% ?Indent amount? 
+{\bf}% ?Theorem head font? 
+{.}% ?Punctuation after theorem head? 
+{.5em}%  ?Space after theorem head? 
+{}% ?Theorem head spec (can be left empty, meaning ‘normal’)? 
+
+
+\theoremstyle{teo}
+\newtheorem{teo}{Theorem}[chapter]
+\newtheorem{pro}[teo]{Proposition}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{cor}[teo]{Corollary}
+\newtheorem{con}[teo]{Conjecture}
+\newtheorem{exe}[teo]{Exercise}
+\newtheorem{sln}[teo]{Solution}
+
+
+\theoremstyle{dfn}
+\newtheorem{dfn}[teo]{Definition}
+\newtheorem{dfs}[teo]{Definitions}
+\newtheorem{que}[teo]{Question}
+\newtheorem{pos}[teo]{Postulate}
+\newtheorem{axi}[teo]{Axiom}
+\newtheorem{fct}[teo]{Fact}
+\newtheorem{ntn}[teo]{Notation}
+
+
+\theoremstyle{rem}
+\newtheorem{rem}[teo]{Remark}
+\newtheorem{exa}[teo]{Example}
+\newtheorem{exs}[teo]{Examples}
+\newtheorem{nte}[teo]{Note}
+\newtheorem{wrn}[teo]{WARNING}
+\newtheorem{sol}[teo]{Solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MACROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\newcommand{\cat}[1]{\textbf{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\frontmatter
+
+\subfile{tex/0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\mainmatter
+
+\chapter{Lecture 1}
+\subfile{tex/1}
+
+\chapter{Lecture 2}
+\subfile{tex/2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BACK MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\backmatter
+
+\bibliographystyle{amsalpha}
+\bibliography{notesbib}
+
+\end{document}
+
